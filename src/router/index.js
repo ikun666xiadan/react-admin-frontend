@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 
 import User from '../pages/User'
 import Layout from '../pages/Layout'
@@ -12,6 +12,11 @@ const router = createBrowserRouter([
         path:'/',
         element:<Layout/>,
         children:[
+            // 路由重定向
+            {
+                path:'/',
+                element:<Navigate to='home' replace/>
+            },
             {
                 path:'home',
                 element:<Home/>
