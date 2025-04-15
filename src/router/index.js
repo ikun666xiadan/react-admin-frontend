@@ -1,10 +1,11 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
+import { lazy, Suspense } from 'react'
 
-import User from '../pages/User'
-import Layout from '../pages/Layout'
-import Home from '../pages/Home'
-import Goods from '../pages/Goods'
-import Other from '../pages/Other'
+const Layout = lazy(()=>import('../pages/Layout'))
+const Home = lazy(()=>import('../pages/Home'))
+const Goods = lazy(()=>import('../pages/Goods'))
+const User = lazy(()=>import('../pages/User'))
+const Other = lazy(()=>import('../pages/Other'))
 
 
 const router = createBrowserRouter([
@@ -19,19 +20,19 @@ const router = createBrowserRouter([
             },
             {
                 path:'home',
-                element:<Home/>
+                element: <Suspense fallback={'loading...'}><Home /> </Suspense>
             },
             {
                 path:'goods',
-                element:<Goods/>
+                element:<Suspense fallback={'loading...'}><Goods /> </Suspense>
             },
             {
                 path:'user',
-                element:<User/>
+                element:<Suspense fallback={'loading...'}><User /> </Suspense>
             },
             {
                 path:'other',
-                element:<Other/>
+                element:<Suspense fallback={'loading...'}><Other /> </Suspense>
             }
         ]
     },
