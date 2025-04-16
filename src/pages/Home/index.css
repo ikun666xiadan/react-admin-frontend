@@ -1,0 +1,29 @@
+
+.user{
+    display: flex;
+    gap: 30px;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+}
+
+.user_admin{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    p{
+        font-size: 20px;
+        color: #c1c1c1;
+    }
+}
+
+.info{
+    margin-top: 15px;
+    font-size: 15px;
+}
