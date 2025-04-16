@@ -12,3 +12,11 @@
   overflow: hidden;
   cursor: pointer;
 }
+
+.item{
+  cursor: pointer;
+  padding: 2px;
+}
+.item:hover{
+  background: #f0f0f0;
+}
