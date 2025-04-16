@@ -1,0 +1,124 @@
+{
+  "videoData": [
+    {
+      "id": 1,
+      "name": "小米",
+      "money": 2699
+    },
+    {
+      "id": 2,
+      "name": "华为",
+      "money": 5999
+    },
+    {
+      "id": 3,
+      "name": "vivo",
+      "money": 2899
+    },
+    {
+      "id": 4,
+      "name": "oppo",
+      "money": 7949
+    },
+    {
+      "id": 5,
+      "name": "iphone",
+      "money": 9999
+    }
+  ],
+  "userData": [
+    {
+      "id": 1,
+      "date": "周一",
+      "new": 12,
+      "active": 485
+    },
+    {
+      "id": 2,
+      "date": "周二",
+      "new": 18,
+      "active": 523
+    },
+    {
+      "id": 3,
+      "date": "周三",
+      "new": 22,
+      "active": 610
+    },
+    {
+      "id": 4,
+      "date": "周四",
+      "new": 15,
+      "active": 587
+    },
+    {
+      "id": 5,
+      "date": "周五",
+      "new": 27,
+      "active": 698
+    },
+    {
+      "id": 6,
+      "date": "周六",
+      "new": 54,
+      "active": 457
+    },
+    {
+      "id": 7,
+      "date": "周日",
+      "new": 45,
+      "active": 751
+    }
+  ],
+  "tableData": [
+    {
+      "id": 1,
+      "name": "小米",
+      "todayBuy": 354,
+      "monthBuy": 3542,
+      "totalBuy": 24561,
+      "date": "20250405"
+    },
+    {
+      "id": 2,
+      "name": "华为",
+      "todayBuy": 654,
+      "monthBuy": 6542,
+      "totalBuy": 78511,
+      "date": "20250415"
+    },
+    {
+      "id": 3,
+      "name": "vivo",
+      "todayBuy": 782,
+      "monthBuy": 7412,
+      "totalBuy": 45784,
+      "date": "20250412"
+    },
+    {
+      "id": 4,
+      "name": "oppo",
+      "todayBuy": 254,
+      "monthBuy": 6142,
+      "totalBuy": 74100,
+      "date": "20250401"
+    },
+    {
+      "id": 5,
+      "name": "iphone",
+      "todayBuy": 1045,
+      "monthBuy": 4568,
+      "totalBuy": 94515,
+      "date": "20250407"
+    }
+  ],
+  "userInfo": {
+    "id": 1001,
+    "name": "Y-sum",
+    "age": 22,
+    "avatar": "https://pic4.zhimg.com/v2-f10ac7fc477596faf538ca274852c68f_b.jpg",
+    "identity": "超级管理员",
+    "login_date": "2025-04-16",
+    "login_address": "江西"
+  }
+}
