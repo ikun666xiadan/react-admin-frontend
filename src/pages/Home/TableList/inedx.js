@@ -34,7 +34,7 @@ const TableList = ()=>{
       getTableList()
     },[])
     return (
-        <Row>
+      <Row>
         <Col span={8}>
           <Card className="user_info" hoverable>
             <Table columns={columns} dataSource={tableData} rowKey="id" size="middle" pagination={false}/>

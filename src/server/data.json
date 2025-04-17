@@ -3,27 +3,26 @@
     {
       "id": 1,
       "name": "小米",
-      "money": 2699
+      "value": 2699
     },
     {
       "id": 2,
       "name": "华为",
-      "money": 5999
+      "value": 5999
     },
     {
       "id": 3,
       "name": "vivo",
-      "money": 2899
+      "value": 2899
     },
     {
-      "id": 4,
       "name": "oppo",
-      "money": 7949
+      "value": 7949
     },
     {
       "id": 5,
       "name": "iphone",
-      "money": 9999
+      "value": 9999
     }
   ],
   "userData": [
