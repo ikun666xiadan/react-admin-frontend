@@ -7,11 +7,5 @@ const getUserData = () => {
   });
 };
 
-const getUserLine = () => {
-  return request({
-    url: "/userLine",
-    method: "GET",
-  });
-};
 
-export { getUserData,getUserLine };
+export { getUserData };
