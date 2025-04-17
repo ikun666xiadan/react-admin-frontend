@@ -2,15 +2,19 @@ import "./index.css";
 import VideoEcharts from "./VideoEcharts";
 import TableList from "./TableList/inedx";
 import UserInfo from "./UserInfo";
+import UserEcharts from "./UserDataEcharts";
 
 function Home() {
   return (
     <div className="home">
-      <div className="top_content">
+      <div className="content">
         <UserInfo/>
         <VideoEcharts/>
       </div>
-      <TableList/>
+      <div className="content">
+        <TableList/>
+        <UserEcharts/>
+      </div>
     </div>
   );
 }
