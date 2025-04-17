@@ -7,7 +7,6 @@ const dataSource = [
     id: 1,
     name: "胡彦斌",
     gender: "男",
-    age: 32,
     date: "2002-02-12",
     phone: "1234567890",
     address: "西湖区湖底公园1号",
@@ -16,7 +15,6 @@ const dataSource = [
     id: 1,
     name: "胡彦斌",
     gender: "男",
-    age: 32,
     date: "2002-02-12",
     phone: "1234567890",
     address: "西湖区湖底公园1号",
@@ -33,11 +31,6 @@ const columns = [
     title: "性别",
     dataIndex: "gender",
     key: "gender",
-  },
-  {
-    title: "年龄",
-    dataIndex: "age",
-    key: "age",
   },
   {
     title: "出生日期",
@@ -71,7 +64,7 @@ const columns = [
 ];
 
 const TableList = () => {
-  return <Table dataSource={dataSource} columns={columns} />;
+  return <Table dataSource={dataSource} columns={columns}/>;
 };
 
 export default TableList;
