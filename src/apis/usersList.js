@@ -24,4 +24,17 @@ const delUser = (id) => {
   });
 };
 
-export { getUserList,addUser,delUser };
+// 全局搜索（跨字段搜索）
+const searchUsersGlobal = async (keyword) => {
+  
+  const allUsers = await request({ url: "/users" });
+  
+  return allUsers.filter(user => 
+    ['name', 'address', 'phone', 'gender'].some(field => 
+      String(user[field] || '').includes(keyword)
+    )
+  );
+};
+
+
+export { getUserList,addUser,delUser,searchUsersGlobal };

@@ -13,7 +13,7 @@ import {
 import "./index.css";
 import { useState, useEffect } from "react";
 import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
-import { delUser, getUserList } from "../../apis/usersList";
+import { delUser, getUserList, searchUsersGlobal } from "../../apis/usersList";
 import { addUser } from "../../apis/usersList";
 
 const { Search } = Input;
@@ -57,7 +57,12 @@ function User() {
         userList.length >= 1 ? (
           <div className="action">
             <Button type="primary" icon={<EditOutlined />}></Button>
-            <Popconfirm title="是否确认删除" okText="删除" cancelText="取消" onConfirm={()=>del(record.id)}>
+            <Popconfirm
+              title="是否确认删除"
+              okText="删除"
+              cancelText="取消"
+              onConfirm={() => del(record.id)}
+            >
               <Button type="primary" danger icon={<DeleteOutlined />}></Button>
             </Popconfirm>
           </div>
@@ -65,10 +70,11 @@ function User() {
     },
   ];
 
+  // 获取用户列表
   const getUserData = async () => {
     const res = await getUserList({
-      _sort: 'createdAt',
-      _order: 'desc'
+      _sort: "createdAt",
+      _order: "desc",
     });
     setUserList(res);
   };
@@ -86,32 +92,46 @@ function User() {
         phone: values.phone,
         address: values.address,
         date: values.date ? values.date.format("YYYY-MM-DD") : null,
-        createdAt:new Date()
+        createdAt: new Date(),
       };
 
       await addUser(userData);
       message.success("用户添加成功");
-      
+
       form.resetFields();
       setShowForm(false);
-      
+
       // 重新获取用户列表
       await getUserData();
-      
     } catch (error) {
       message.error("添加用户失败");
       console.error("添加用户失败:", error);
     }
   };
 
-  const onSearch = (e) => {
-    console.log(e);
+  // 查找用户
+  const onSearch = async (value) => {
+    if (!value.trim()) {
+      await getUserData(); // 如果搜索关键词为空，恢复显示全部数据
+      return;
+    }
+    try {
+      const res = await searchUsersGlobal(value);
+      setUserList(res);
+      console.log(res);
+      
+    } catch (error) {
+      message.error("搜索失败");
+    }
   };
-  const del = async (id)=>{
-    await delUser(id)
+
+  // 删除用户
+  const del = async (id) => {
+    await delUser(id);
     message.success("用户删除成功");
-    await getUserData()
-  }
+    await getUserData();
+  };
+
   return (
     <div className="User">
       <div className="btns">
@@ -159,8 +179,8 @@ function User() {
               <Select
                 style={{ width: 60 }}
                 options={[
-                  { value: 1, label: "男" },
-                  { value: 0, label: "女" },
+                  { value: "男", label: "男" },
+                  { value: "女", label: "女" }
                 ]}
               />
             </Form.Item>
@@ -200,7 +220,11 @@ function User() {
         dataSource={userList}
         columns={columns}
         rowKey="id"
-        pagination={{ position: ["bottomCenter"],showSizeChanger: false,defaultPageSize:8 }}
+        pagination={{
+          position: ["bottomCenter"],
+          showSizeChanger: false,
+          defaultPageSize: 8,
+        }}
       />
     </div>
   );
