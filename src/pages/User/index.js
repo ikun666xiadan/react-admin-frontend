@@ -13,7 +13,7 @@ import {
 import "./index.css";
 import { useState, useEffect } from "react";
 import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
-import { getUserList } from "../../apis/usersList";
+import { delUser, getUserList } from "../../apis/usersList";
 import { addUser } from "../../apis/usersList";
 
 const { Search } = Input;
@@ -57,7 +57,7 @@ function User() {
         userList.length >= 1 ? (
           <div className="action">
             <Button type="primary" icon={<EditOutlined />}></Button>
-            <Popconfirm title="确认删除吗?">
+            <Popconfirm title="是否确认删除" okText="删除" cancelText="取消" onConfirm={()=>del(record.id)}>
               <Button type="primary" danger icon={<DeleteOutlined />}></Button>
             </Popconfirm>
           </div>
@@ -107,6 +107,11 @@ function User() {
   const onSearch = (e) => {
     console.log(e);
   };
+  const del = async (id)=>{
+    await delUser(id)
+    message.success("用户删除成功");
+    await getUserData()
+  }
   return (
     <div className="User">
       <div className="btns">

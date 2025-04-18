@@ -17,4 +17,11 @@ const addUser = (data) => {
   });
 };
 
-export { getUserList,addUser };
+const delUser = (id) => {
+  return request({
+    url: `/users/${id}`,
+    method: "DELETE",
+  });
+};
+
+export { getUserList,addUser,delUser };
