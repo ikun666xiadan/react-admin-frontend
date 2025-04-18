@@ -20,17 +20,9 @@ const { Search } = Input;
 
 function User() {
   const [showForm, setShowForm] = useState(false);
+
   const [userList, setUserList] = useState([]);
   const [form] = Form.useForm();
-
-  useEffect(() => {
-    const getUserData = async () => {
-      const res = await getUserList();
-      setUserList(res);
-    };
-    getUserData();
-  }, []);
-
   const columns = [
     {
       title: "姓名",
@@ -73,28 +65,42 @@ function User() {
     },
   ];
 
-  const handleTableChange = (e) => {
-    console.log(e);
-    
+  const getUserData = async () => {
+    const res = await getUserList({
+      _sort: 'createdAt',
+      _order: 'desc'
+    });
+    setUserList(res);
   };
+
+  useEffect(() => {
+    getUserData();
+  }, []);
 
   // 添加用户
   const onFinish = async (values) => {
     try {
-      // 处理日期格式
-      const formattedValues = {
-        ...values,
+      const userData = {
+        name: values.name,
+        gender: values.gender,
+        phone: values.phone,
+        address: values.address,
         date: values.date ? values.date.format("YYYY-MM-DD") : null,
+        createdAt:new Date()
       };
 
-      await addUser(formattedValues);
+      await addUser(userData);
       message.success("用户添加成功");
+      
       form.resetFields();
       setShowForm(false);
+      
+      // 重新获取用户列表
+      await getUserData();
+      
     } catch (error) {
       message.error("添加用户失败");
       console.error("添加用户失败:", error);
-    } finally {
     }
   };
 
@@ -132,7 +138,7 @@ function User() {
             labelCol={{ span: 8 }}
             wrapperCol={{ span: 16 }}
             style={{ maxWidth: 400 }}
-            initialValues={{ gender: 1 }} // 使用 value 值而非 label
+            initialValues={{ gender: "男" }}
             onFinish={onFinish}
             autoComplete="off"
           >
@@ -189,8 +195,7 @@ function User() {
         dataSource={userList}
         columns={columns}
         rowKey="id"
-        pagination={{ position: ["bottomCenter"],showSizeChanger: false }}
-        onChange={handleTableChange}
+        pagination={{ position: ["bottomCenter"],showSizeChanger: false,defaultPageSize:8 }}
       />
     </div>
   );

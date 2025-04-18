@@ -5,13 +5,7 @@ const getUserList = (params) => {
   return request({
     url: "/users",
     method: "GET",
-    params:{
-      ...params,
-      pageNum: 1,
-      pageSize: 8,
-      sortField: 'date', 
-      sortOrder: 'desc' 
-    }
+    params
   });
 };
 
