@@ -1,0 +1,9 @@
+
+.login_form{
+    padding: 20px;
+    width: 400px;
+    height: 200px;
+    margin: 250px 600px;
+    border-radius: 10px;
+    background: rgb(239, 240, 240);
+}

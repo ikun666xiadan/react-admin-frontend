@@ -1,16 +1,16 @@
 import { Col, Row, Card } from "antd";
-import { useEffect, useState } from "react";
-import { getUserInfo } from "../../../apis/userInfo";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getUsersInfo } from "../../../store/modules/user";
 
 const UserInfo = () => {
-  const [userInfo, setUserInfo] = useState({});
+  const userInfo = useSelector((state) => state.user.userInfo);
+  const dispatch = useDispatch();
+  
   useEffect(() => {
-    const getUserInfoList = async () => {
-      const res = await getUserInfo();
-      setUserInfo(res);
-    };
-    getUserInfoList();
-  }, []);
+    dispatch(getUsersInfo());
+  }, [dispatch]);
+
   return (
     <Row>
       <Col span={8}>

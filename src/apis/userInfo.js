@@ -7,4 +7,12 @@ const getUserInfo = () => {
   });
 };
 
-export { getUserInfo };
+const loginAPI = (data) => {
+  return request({
+    url: "/userInfo",
+    method: "POST",
+    data
+  });
+};
+
+export { getUserInfo,loginAPI };

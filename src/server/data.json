@@ -115,6 +115,8 @@
   "userInfo": {
     "id": 1001,
     "name": "Y-sum",
+    "phone":"15100000000",
+    "password":"123456",
     "age": 22,
     "avatar": "https://pic4.zhimg.com/v2-f10ac7fc477596faf538ca274852c68f_b.jpg",
     "identity": "超级管理员",
