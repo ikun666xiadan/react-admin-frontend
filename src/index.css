@@ -88,6 +88,11 @@ p {
   width: 200px;
 }
 
+.action {
+  display: flex;
+  gap: 5px;
+}
+
 /* ====== 响应式基础 ====== */
 @media (max-width: 768px) {
   html {

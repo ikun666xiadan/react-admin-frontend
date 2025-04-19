@@ -10,7 +10,6 @@ import {
   DatePicker,
   message,
 } from "antd";
-import "./index.css";
 import { useState, useEffect } from "react";
 import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import {
