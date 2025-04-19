@@ -1,15 +1,4 @@
 
-.btns {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px;
-}
-
-.search {
-  width: 200px;
-}
-
 .action {
   display: flex;
   gap: 5px;

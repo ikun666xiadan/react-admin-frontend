@@ -77,6 +77,17 @@ p {
   display: grid;
 }
 
+.btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.search {
+  width: 200px;
+}
+
 /* ====== 响应式基础 ====== */
 @media (max-width: 768px) {
   html {
