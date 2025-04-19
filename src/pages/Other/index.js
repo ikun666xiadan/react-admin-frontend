@@ -1,9 +1,10 @@
+import { Outlet } from "react-router-dom";
 
 
 function Other() {
     return (
       <div className="Other">
-        Other
+        <Outlet/>
       </div>
     );
   }

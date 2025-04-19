@@ -4,6 +4,8 @@ import {
   UserOutlined,
   ShopOutlined,
   UnorderedListOutlined,
+  RiseOutlined,
+  DesktopOutlined
 } from "@ant-design/icons";
 import { Layout, Menu } from "antd";
 import { useNavigate } from "react-router-dom";
@@ -29,6 +31,18 @@ const NavItem = [
     key: "other",
     icon: <UnorderedListOutlined />,
     label: "其他",
+    children:[
+      {
+        key:"other/otherOne",
+        icon:<RiseOutlined />,
+        label:"其他一"
+      },
+      {
+        key:"other/otherTwo",
+        icon:<DesktopOutlined />,
+        label:"其他二"
+      }
+    ]
   },
 ];
 const Asider = React.memo(({ collapsed }) => {

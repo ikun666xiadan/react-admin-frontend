@@ -6,6 +6,8 @@ const Home = lazy(()=>import('../pages/Home'))
 const Goods = lazy(()=>import('../pages/Goods'))
 const User = lazy(()=>import('../pages/User'))
 const Other = lazy(()=>import('../pages/Other'))
+const OtherOne = lazy(()=>import('../pages/Other/other_one'))
+const OtherTwo = lazy(()=>import('../pages/Other/other_two'))
 
 
 const router = createBrowserRouter([
@@ -32,7 +34,17 @@ const router = createBrowserRouter([
             },
             {
                 path:'other',
-                element:<Suspense fallback={'loading...'}><Other /> </Suspense>
+                element:<Suspense fallback={'loading...'}><Other /> </Suspense>,
+                children:[
+                    {
+                        path:'otherOne',
+                        element:<Suspense fallback={'loading...'}><OtherOne /> </Suspense>
+                    },
+                    {
+                        path:'otherTwo',
+                        element:<Suspense fallback={'loading...'}><OtherTwo /> </Suspense>
+                    }
+                ]
             }
         ]
     },
