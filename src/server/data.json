@@ -618,17 +618,17 @@
       "createdAt": "2025-04-19T08:00:51.755Z"
     }
   ],
-  "goods":[
+  "goods": [
     {
-      "id": 1,
+      "id": "1",
       "name": "衬衫",
-      "price": 35,
       "desciption": "蓝色格子衬衫,好看又百搭",
-      "incentory": 45,
-      "created_time": "1745058356"
+      "price": 278,
+      "incentory": 1,
+      "created_time": "1745114499464"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "牛仔裤",
       "price": 89,
       "desciption": "经典直筒牛仔裤，修身版型",
@@ -636,7 +636,7 @@
       "created_time": "1745144756"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "运动鞋",
       "price": 199,
       "desciption": "轻便透气跑步鞋，减震设计",
@@ -644,7 +644,7 @@
       "created_time": "1745231156"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "羊毛大衣",
       "price": 459,
       "desciption": "冬季保暖羊毛大衣，商务休闲",
@@ -652,7 +652,7 @@
       "created_time": "1745317556"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "T恤",
       "price": 49,
       "desciption": "纯棉圆领T恤，多色可选",
@@ -660,7 +660,7 @@
       "created_time": "1745403956"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "休闲裤",
       "price": 129,
       "desciption": "商务休闲裤，抗皱面料",
@@ -668,7 +668,7 @@
       "created_time": "1745490356"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "羽绒服",
       "price": 599,
       "desciption": "90%白鸭绒，冬季保暖",
@@ -676,7 +676,7 @@
       "created_time": "1745576756"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "卫衣",
       "price": 99,
       "desciption": "连帽卫衣，加绒保暖",
@@ -684,7 +684,7 @@
       "created_time": "1745663156"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "皮鞋",
       "price": 259,
       "desciption": "商务正装皮鞋，牛皮材质",
@@ -692,7 +692,7 @@
       "created_time": "1745749556"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "短裙",
       "price": 79,
       "desciption": "A字裙，夏季百搭款",
@@ -700,7 +700,7 @@
       "created_time": "1745835956"
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "风衣",
       "price": 329,
       "desciption": "春秋季薄款风衣，防水面料",
@@ -708,7 +708,7 @@
       "created_time": "1745922356"
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "针织衫",
       "price": 119,
       "desciption": "羊毛混纺针织衫，柔软舒适",
@@ -716,7 +716,7 @@
       "created_time": "1746008756"
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "运动裤",
       "price": 109,
       "desciption": "速干面料运动裤，弹性腰围",
@@ -724,7 +724,7 @@
       "created_time": "1746095156"
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "POLO衫",
       "price": 69,
       "desciption": "商务休闲POLO衫，纯棉面料",
@@ -732,7 +732,7 @@
       "created_time": "1746181556"
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "西装外套",
       "price": 399,
       "desciption": "修身版型西装，商务正装",
@@ -740,7 +740,7 @@
       "created_time": "1746267956"
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "帆布鞋",
       "price": 89,
       "desciption": "经典高帮帆布鞋，多色可选",
@@ -748,7 +748,7 @@
       "created_time": "1746354356"
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "连衣裙",
       "price": 159,
       "desciption": "碎花雪纺连衣裙，夏季新款",
@@ -756,7 +756,7 @@
       "created_time": "1746440756"
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "毛呢帽",
       "price": 59,
       "desciption": "冬季保暖毛呢帽，多种颜色",
@@ -764,7 +764,7 @@
       "created_time": "1746527156"
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "皮带",
       "price": 79,
       "desciption": "真牛皮皮带，商务休闲",
@@ -772,7 +772,7 @@
       "created_time": "1746613556"
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "围巾",
       "price": 49,
       "desciption": "羊绒围巾，冬季保暖",
@@ -780,7 +780,7 @@
       "created_time": "1746699956"
     },
     {
-      "id": 21,
+      "id": "21",
       "name": "手套",
       "price": 39,
       "desciption": "冬季保暖手套，触屏设计",
@@ -788,7 +788,7 @@
       "created_time": "1746786356"
     },
     {
-      "id": 22,
+      "id": "22",
       "name": "太阳镜",
       "price": 129,
       "desciption": "偏光太阳镜，UV400防护",
@@ -796,7 +796,7 @@
       "created_time": "1746872756"
     },
     {
-      "id": 23,
+      "id": "23",
       "name": "背包",
       "price": 149,
       "desciption": "商务休闲背包，大容量设计",
@@ -804,7 +804,7 @@
       "created_time": "1746959156"
     },
     {
-      "id": 24,
+      "id": "24",
       "name": "手表",
       "price": 299,
       "desciption": "石英手表，不锈钢表带",
@@ -812,7 +812,7 @@
       "created_time": "1747045556"
     },
     {
-      "id": 25,
+      "id": "25",
       "name": "袜子",
       "price": 15,
       "desciption": "纯棉运动袜，透气吸汗",
@@ -820,7 +820,7 @@
       "created_time": "1747131956"
     },
     {
-      "id": 26,
+      "id": "26",
       "name": "睡衣",
       "price": 89,
       "desciption": "纯棉家居睡衣套装",
@@ -828,7 +828,7 @@
       "created_time": "1747218356"
     },
     {
-      "id": 27,
+      "id": "27",
       "name": "内衣",
       "price": 49,
       "desciption": "纯棉透气内衣，三件装",
@@ -836,7 +836,7 @@
       "created_time": "1747304756"
     },
     {
-      "id": 28,
+      "id": "28",
       "name": "凉鞋",
       "price": 119,
       "desciption": "夏季透气凉鞋，防滑底",
@@ -844,7 +844,7 @@
       "created_time": "1747391156"
     },
     {
-      "id": 29,
+      "id": "29",
       "name": "毛衣",
       "price": 139,
       "desciption": "高领毛衣，冬季保暖",
@@ -852,7 +852,7 @@
       "created_time": "1747477556"
     },
     {
-      "id": 30,
+      "id": "30",
       "name": "短裤",
       "price": 59,
       "desciption": "夏季运动短裤，速干面料",
@@ -860,7 +860,7 @@
       "created_time": "1747563956"
     },
     {
-      "id": 31,
+      "id": "31",
       "name": "领带",
       "price": 69,
       "desciption": "商务真丝领带，多款可选",
@@ -868,7 +868,7 @@
       "created_time": "1747650356"
     },
     {
-      "id": 32,
+      "id": "32",
       "name": "雪地靴",
       "price": 199,
       "desciption": "冬季保暖雪地靴，防滑底",
@@ -876,7 +876,7 @@
       "created_time": "1747736756"
     },
     {
-      "id": 33,
+      "id": "33",
       "name": "泳衣",
       "price": 109,
       "desciption": "女士连体泳衣，速干面料",
@@ -884,7 +884,7 @@
       "created_time": "1747823156"
     },
     {
-      "id": 34,
+      "id": "34",
       "name": "防晒衣",
       "price": 79,
       "desciption": "UPF50+防晒衣，轻薄透气",
@@ -892,7 +892,7 @@
       "created_time": "1747909556"
     },
     {
-      "id": 35,
+      "id": "35",
       "name": "打底裤",
       "price": 49,
       "desciption": "加绒打底裤，冬季保暖",
@@ -900,7 +900,7 @@
       "created_time": "1747995956"
     },
     {
-      "id": 36,
+      "id": "36",
       "name": "棒球帽",
       "price": 39,
       "desciption": "时尚棒球帽，可调节",
@@ -908,7 +908,7 @@
       "created_time": "1748082356"
     },
     {
-      "id": 37,
+      "id": "37",
       "name": "钱包",
       "price": 89,
       "desciption": "真皮钱包，多卡位设计",
@@ -916,7 +916,7 @@
       "created_time": "1748168756"
     },
     {
-      "id": 38,
+      "id": "38",
       "name": "耳罩",
       "price": 29,
       "desciption": "冬季保暖耳罩，柔软舒适",
@@ -924,7 +924,7 @@
       "created_time": "1748255156"
     },
     {
-      "id": 39,
+      "id": "39",
       "name": "丝巾",
       "price": 59,
       "desciption": "真丝方巾，时尚配饰",
@@ -932,7 +932,7 @@
       "created_time": "1748341556"
     },
     {
-      "id": 40,
+      "id": "40",
       "name": "腰带",
       "price": 49,
       "desciption": "时尚腰带，多色可选",
@@ -940,7 +940,7 @@
       "created_time": "1748427956"
     },
     {
-      "id": 41,
+      "id": "41",
       "name": "拖鞋",
       "price": 29,
       "desciption": "居家拖鞋，防滑底",
@@ -948,7 +948,7 @@
       "created_time": "1748514356"
     },
     {
-      "id": 42,
+      "id": "42",
       "name": "雨伞",
       "price": 49,
       "desciption": "自动开合晴雨伞，抗风设计",
@@ -956,7 +956,7 @@
       "created_time": "1748600756"
     },
     {
-      "id": 43,
+      "id": "43",
       "name": "手帕",
       "price": 9,
       "desciption": "纯棉手帕，吸水性好",
@@ -964,7 +964,7 @@
       "created_time": "1748687156"
     },
     {
-      "id": 44,
+      "id": "44",
       "name": "发带",
       "price": 19,
       "desciption": "运动发带，吸汗透气",
@@ -972,7 +972,7 @@
       "created_time": "1748773556"
     },
     {
-      "id": 45,
+      "id": "45",
       "name": "袖扣",
       "price": 99,
       "desciption": "男士商务袖扣，精致设计",
@@ -980,7 +980,7 @@
       "created_time": "1748859956"
     },
     {
-      "id": 46,
+      "id": "46",
       "name": "钥匙扣",
       "price": 15,
       "desciption": "金属钥匙扣，耐用设计",
@@ -988,7 +988,7 @@
       "created_time": "1748946356"
     },
     {
-      "id": 47,
+      "id": "47",
       "name": "胸针",
       "price": 59,
       "desciption": "时尚胸针，精致做工",
@@ -996,7 +996,7 @@
       "created_time": "1749032756"
     },
     {
-      "id": 48,
+      "id": "48",
       "name": "手链",
       "price": 79,
       "desciption": "时尚手链，多款可选",
@@ -1004,7 +1004,7 @@
       "created_time": "1749119156"
     },
     {
-      "id": 49,
+      "id": "49",
       "name": "项链",
       "price": 129,
       "desciption": "简约项链，925银材质",
@@ -1012,12 +1012,20 @@
       "created_time": "1749205556"
     },
     {
-      "id": 50,
+      "id": "50",
       "name": "戒指",
       "price": 89,
       "desciption": "时尚戒指，可调节大小",
       "incentory": 32,
       "created_time": "1749291956"
+    },
+    {
+      "id": "d90b",
+      "name": "人字拖",
+      "desciption": "穿起来很舒服的人字拖",
+      "price": 12,
+      "incentory": 3,
+      "created_time": "1745115035393"
     }
   ]
 }

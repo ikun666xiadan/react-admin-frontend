@@ -256,7 +256,7 @@ function User() {
 
           <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
             <Button type="primary" htmlType="submit">
-              添加
+              确认
             </Button>
           </Form.Item>
         </Form>
