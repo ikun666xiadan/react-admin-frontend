@@ -4,7 +4,7 @@ import TableList from "./TableList/inedx";
 import UserInfo from "./UserInfo";
 import UserEcharts from "./UserDataEcharts";
 
-function Home() {
+const Home = () => {
   return (
     <div className="home">
       <div className="content">
@@ -17,6 +17,6 @@ function Home() {
       </div>
     </div>
   );
-}
+};
 
 export default Home;

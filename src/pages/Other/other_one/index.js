@@ -1,6 +1,6 @@
 
 
-function OtherOne() {
+const OtherOne = () => {
     return (
       <div className="OtherOne">
         OtherOne

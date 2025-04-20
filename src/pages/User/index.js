@@ -23,7 +23,7 @@ import { addUser } from "../../apis/usersList";
 import moment from "moment";
 const { Search } = Input;
 
-function User() {
+const User = () => {
   const [showForm, setShowForm] = useState(false);
   const [formMode, setFormMode] = useState("add");
   const [userList, setUserList] = useState([]);

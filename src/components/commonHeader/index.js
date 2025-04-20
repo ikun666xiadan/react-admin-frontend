@@ -18,9 +18,12 @@ const CommmenHeader = ({ collapsed }) => {
     navigate("login");
     dispatch(clearUserInfo());
   };
+  const goUserInfo = () => {
+    navigate("userCenter");
+  };
   const content = (
     <div>
-      <p className="item">个人中心</p>
+      <p className="item" onClick={goUserInfo}>个人中心</p>
       <p className="item" onClick={goLogin}>
         退出登录
       </p>

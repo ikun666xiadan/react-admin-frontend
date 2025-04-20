@@ -9,6 +9,8 @@ const Other = lazy(() => import("../pages/Other"));
 const OtherOne = lazy(() => import("../pages/Other/other_one"));
 const OtherTwo = lazy(() => import("../pages/Other/other_two"));
 const Login = lazy(() => import("../pages/Login"));
+const UserCenter = lazy(() => import("../pages/UserCenter"));
+
 
 const router = createBrowserRouter([
   {
@@ -77,6 +79,14 @@ const router = createBrowserRouter([
     element: (
       <Suspense fallback={"loading..."}>
         <Login />
+      </Suspense>
+    ),
+  },
+  {
+    path: "userCenter",
+    element: (
+      <Suspense fallback={"loading..."}>
+        <UserCenter />
       </Suspense>
     ),
   },

@@ -45,7 +45,7 @@ const NavItem = [
     ],
   },
 ];
-const Asider = React.memo(({ collapsed }) => {
+const Asider = ({ collapsed }) => {
   const navigate = useNavigate();
   return (
     <Sider trigger={null} collapsible collapsed={collapsed}>
@@ -62,6 +62,6 @@ const Asider = React.memo(({ collapsed }) => {
       />
     </Sider>
   );
-});
+};
 
 export default Asider;

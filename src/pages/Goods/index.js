@@ -21,7 +21,7 @@ import {
 
 const { Search } = Input;
 
-function Goods() {
+const Goods = () => {
   const [showForm, setShowForm] = useState(false);
   const [form] = Form.useForm();
   const [goodsList, setGoodsList] = useState([]);
@@ -222,6 +222,6 @@ function Goods() {
       />
     </div>
   );
-}
+};
 
 export default Goods;
