@@ -17,14 +17,14 @@ echarts.use([
 
 const VideoEcharts = () => {
   const chartRef = useRef(null); // 使用 useRef 获取 DOM 节点
-  const [data,setData] = useState([])
-  useEffect(()=>{
-    const getData = async ()=>{
-      const res = await getVideoData()
-      setData(res)
-    }
-    getData()
-  },[])
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    const getData = async () => {
+      const res = await getVideoData();
+      setData(res);
+    };
+    getData();
+  }, []);
   useEffect(() => {
     // 初始化图表
     const myChart = echarts.init(chartRef.current);
@@ -62,7 +62,7 @@ const VideoEcharts = () => {
           labelLine: {
             show: false,
           },
-          data: data
+          data: data,
         },
       ],
     };
@@ -76,7 +76,12 @@ const VideoEcharts = () => {
     };
   }, [data]); // 空依赖数组表示只在组件挂载时运行
 
-  return <div ref={chartRef} style={{width:"100%", height: "300px",minHeight: "300px" }} />
+  return (
+    <div
+      ref={chartRef}
+      style={{ width: "100%", height: "300px", minHeight: "300px" }}
+    />
+  );
 };
 
 export default VideoEcharts;

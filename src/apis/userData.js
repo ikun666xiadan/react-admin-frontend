@@ -7,5 +7,4 @@ const getUserData = () => {
   });
 };
 
-
 export { getUserData };

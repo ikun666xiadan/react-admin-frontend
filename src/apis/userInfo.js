@@ -11,8 +11,8 @@ const loginAPI = (data) => {
   return request({
     url: "/userInfo",
     method: "POST",
-    data
+    data,
   });
 };
 
-export { getUserInfo,loginAPI };
+export { getUserInfo, loginAPI };

@@ -27,7 +27,7 @@ function User() {
   const [showForm, setShowForm] = useState(false);
   const [formMode, setFormMode] = useState("add");
   const [userList, setUserList] = useState([]);
-  const [userId,setUserId] = useState('')
+  const [userId, setUserId] = useState("");
   const [form] = Form.useForm();
   const columns = [
     {
@@ -93,37 +93,37 @@ function User() {
     getUserData();
   }, []);
 
-  const addButton =()=>{
-    setFormMode('add')
-    setShowForm(!showForm)
+  const addButton = () => {
+    setFormMode("add");
+    setShowForm(!showForm);
     form.resetFields();
-  }
+  };
 
   // 添加/编辑用户
   const onFinish = async (values) => {
     try {
       const userData = {
         name: values.name,
-        gender: values.gender, 
+        gender: values.gender,
         phone: values.phone,
         address: values.address,
         date: values.date ? values.date.format("YYYY-MM-DD") : null,
       };
-  
-      if(formMode === "edit" && userId) {
+
+      if (formMode === "edit" && userId) {
         await updateUser({
           ...userData,
-          id: userId
+          id: userId,
         });
         message.success("用户修改成功");
       } else {
         await addUser({
           ...userData,
-          createdAt: new Date()
+          createdAt: new Date(),
         });
         message.success("用户添加成功");
       }
-  
+
       form.resetFields();
       setShowForm(false);
       await getUserData();
@@ -157,8 +157,8 @@ function User() {
   // 编辑功能
   const edit = async (id) => {
     try {
-      setFormMode('edit')
-      setUserId(id)
+      setFormMode("edit");
+      setUserId(id);
       // 1. 先获取数据
       const res = await getUserInfo(id);
 
@@ -182,11 +182,7 @@ function User() {
   return (
     <div className="User">
       <div className="btns">
-        <Button
-          type="primary"
-          icon={<PlusOutlined />}
-          onClick={addButton}
-        >
+        <Button type="primary" icon={<PlusOutlined />} onClick={addButton}>
           新增
         </Button>
         <Search

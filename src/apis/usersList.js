@@ -47,11 +47,18 @@ const updateUser = (data) => {
 };
 
 // 获取详情
-const getUserInfo = (id)=>{
+const getUserInfo = (id) => {
   return request({
-    url:`/users/${id}`,
-    method:"GET"
-  })
-}
+    url: `/users/${id}`,
+    method: "GET",
+  });
+};
 
-export { getUserList, addUser, delUser, searchUsersGlobal, updateUser, getUserInfo };
+export {
+  getUserList,
+  addUser,
+  delUser,
+  searchUsersGlobal,
+  updateUser,
+  getUserInfo,
+};

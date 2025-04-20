@@ -6,7 +6,7 @@ import { getUsersInfo } from "../../../store/modules/user";
 const UserInfo = () => {
   const userInfo = useSelector((state) => state.user.userInfo);
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
     dispatch(getUsersInfo());
   }, [dispatch]);

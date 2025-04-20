@@ -13,10 +13,10 @@
   cursor: pointer;
 }
 
-.item{
+.item {
   cursor: pointer;
   padding: 2px;
 }
-.item:hover{
+.item:hover {
   background: #f0f0f0;
 }

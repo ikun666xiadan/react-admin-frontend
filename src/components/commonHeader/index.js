@@ -11,23 +11,25 @@ import { clearUserInfo, getUsersInfo } from "../../store/modules/user";
 const { Header } = Layout;
 
 const CommmenHeader = ({ collapsed }) => {
-  const navigate = useNavigate()
-  const dispatch = useDispatch()
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-  const goLogin =()=>{
-    navigate('login')
-    dispatch(clearUserInfo())
-  }
+  const goLogin = () => {
+    navigate("login");
+    dispatch(clearUserInfo());
+  };
   const content = (
     <div>
       <p className="item">个人中心</p>
-      <p className="item" onClick={goLogin}>退出登录</p>
+      <p className="item" onClick={goLogin}>
+        退出登录
+      </p>
     </div>
   );
-  const userInfo = useSelector(state =>state.user.userInfo)
-  
+  const userInfo = useSelector((state) => state.user.userInfo);
+
   useEffect(() => {
-    dispatch(getUsersInfo())
+    dispatch(getUsersInfo());
   }, [dispatch]);
 
   return (

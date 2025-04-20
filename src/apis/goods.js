@@ -5,7 +5,7 @@ const getGoodsList = (params) => {
   return request({
     url: "/goods",
     method: "GET",
-    params
+    params,
   });
 };
 
@@ -47,11 +47,18 @@ const updateGoods = (data) => {
 };
 
 // 获取详情
-const getGoodsInfo = (id)=>{
+const getGoodsInfo = (id) => {
   return request({
-    url:`/goods/${id}`,
-    method:"GET"
-  })
-}
+    url: `/goods/${id}`,
+    method: "GET",
+  });
+};
 
-export { getGoodsList,addGoods,delGoods,getGoodsInfo,updateGoods,searchGoodsGlobal };
+export {
+  getGoodsList,
+  addGoods,
+  delGoods,
+  getGoodsInfo,
+  updateGoods,
+  searchGoodsGlobal,
+};

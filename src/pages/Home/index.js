@@ -8,12 +8,12 @@ function Home() {
   return (
     <div className="home">
       <div className="content">
-        <UserInfo/>
-        <VideoEcharts/>
+        <UserInfo />
+        <VideoEcharts />
       </div>
       <div className="content">
-        <TableList/>
-        <UserEcharts/>
+        <TableList />
+        <UserEcharts />
       </div>
     </div>
   );

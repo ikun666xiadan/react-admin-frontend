@@ -5,7 +5,7 @@ import {
   ShopOutlined,
   UnorderedListOutlined,
   RiseOutlined,
-  DesktopOutlined
+  DesktopOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu } from "antd";
 import { useNavigate } from "react-router-dom";
@@ -31,22 +31,22 @@ const NavItem = [
     key: "other",
     icon: <UnorderedListOutlined />,
     label: "其他",
-    children:[
+    children: [
       {
-        key:"other/otherOne",
-        icon:<RiseOutlined />,
-        label:"其他一"
+        key: "other/otherOne",
+        icon: <RiseOutlined />,
+        label: "其他一",
       },
       {
-        key:"other/otherTwo",
-        icon:<DesktopOutlined />,
-        label:"其他二"
-      }
-    ]
+        key: "other/otherTwo",
+        icon: <DesktopOutlined />,
+        label: "其他二",
+      },
+    ],
   },
 ];
 const Asider = React.memo(({ collapsed }) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <Sider trigger={null} collapsible collapsed={collapsed}>
       <div className="nav" />

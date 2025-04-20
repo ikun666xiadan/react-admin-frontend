@@ -12,13 +12,13 @@ const LayoutApp = () => {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
 
-  const collapsed = useSelector(state =>state.tabs.collapsed)
+  const collapsed = useSelector((state) => state.tabs.collapsed);
   return (
     <Layout className="container">
       <Asider collapsed={collapsed} />
       <Layout>
         <CommmenHeader collapsed={collapsed} />
-        <CommonBread/>
+        <CommonBread />
         <Content
           style={{
             margin: "10px 15px",
