@@ -5,9 +5,9 @@ const Layout = lazy(() => import("../pages/Layout"));
 const Home = lazy(() => import("../pages/Home"));
 const Goods = lazy(() => import("../pages/Goods"));
 const User = lazy(() => import("../pages/User"));
-const Other = lazy(() => import("../pages/Other"));
-const LogLogin = lazy(() => import("../pages/Other/LogLogin"));
-const LogActions = lazy(() => import("../pages/Other/LogActions"));
+const Log = lazy(() => import("../pages/Log"));
+const LogLogin = lazy(() => import("../pages/Log/LogLogin"));
+const LogActions = lazy(() => import("../pages/Log/LogActions"));
 const Login = lazy(() => import("../pages/Login"));
 const UserCenter = lazy(() => import("../pages/UserCenter"));
 
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
         path: "log",
         element: (
           <Suspense fallback={"loading..."}>
-            <Other />{" "}
+            <Log />{" "}
           </Suspense>
         ),
         children: [
