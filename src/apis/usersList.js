@@ -1,11 +1,10 @@
 import { request } from "../utils";
 
 // 获取用户列表
-const getUserList = (params) => {
+const getUserList = () => {
   return request({
     url: "/users",
     method: "GET",
-    params,
   });
 };
 

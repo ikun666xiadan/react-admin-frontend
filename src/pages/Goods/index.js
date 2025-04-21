@@ -18,6 +18,7 @@ import {
   searchGoodsGlobal,
   updateGoods,
 } from "../../apis/goods";
+import _ from 'lodash'
 
 const { Search } = Input;
 
@@ -75,12 +76,10 @@ const Goods = () => {
   ];
 
   const getGoodsData = async () => {
-    const res = await getGoodsList({
-      _sort: "created_time",
-      _order: "desc",
-    });
-    setGoodsList(res);
+    const res = await getGoodsList();
+    setGoodsList(_.orderBy(res,["created_time"],["desc"]));
   };
+
   useEffect(() => {
     getGoodsData();
   }, []);
@@ -91,6 +90,8 @@ const Goods = () => {
     form.resetFields();
   };
 
+  console.log(new Date());
+  
   // 添加/编辑
   const onFinish = async (formValue) => {
     try {
@@ -99,13 +100,12 @@ const Goods = () => {
         desciption: formValue.desciption,
         price: formValue.price,
         incentory: formValue.incentory,
-        created_time: Date.now().toString(),
       };
       if (formMode === "edit" && goodsId) {
         await updateGoods({ ...goodFormData, id: goodsId });
         message.success("商品修改成功");
       } else {
-        await addGoods(goodFormData);
+        await addGoods({...goodFormData,created_time: (Math.floor(new Date().getTime() / 1000)).toString()});
         message.success("商品添加成功");
       }
       changeModuleOpen();

@@ -21,6 +21,8 @@ import {
 } from "../../apis/usersList";
 import { addUser } from "../../apis/usersList";
 import moment from "moment";
+import _ from 'lodash'
+
 const { Search } = Input;
 
 const User = () => {
@@ -82,11 +84,8 @@ const User = () => {
 
   // 获取用户列表
   const getUserData = async () => {
-    const res = await getUserList({
-      _sort: "createdAt",
-      _order: "desc",
-    });
-    setUserList(res);
+    const res = await getUserList();
+    setUserList(_.orderBy(res,["createdAt"],["desc"]));
   };
 
   useEffect(() => {
@@ -98,7 +97,7 @@ const User = () => {
     setShowForm(!showForm);
     form.resetFields();
   };
-
+  
   // 添加/编辑用户
   const onFinish = async (values) => {
     try {
@@ -113,7 +112,7 @@ const User = () => {
       if (formMode === "edit" && userId) {
         await updateUser({
           ...userData,
-          id: userId,
+          id: userId
         });
         message.success("用户修改成功");
       } else {

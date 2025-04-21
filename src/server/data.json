@@ -162,20 +162,22 @@
   },
   "users": [
     {
+      "id": "1",
       "name": "王八蛋",
       "gender": "男",
       "phone": "13800138085",
       "address": "北京市朝阳区建国路88号",
       "date": "2001-03-15",
-      "id": "1"
+      "createdAt": "2023-01-01T08:10:00Z"
     },
     {
+      "id": "2",
       "name": "李四",
       "gender": "男",
       "phone": "13912345678",
       "address": "上海市浦东新区张江高科技园区",
       "date": "1998-07-22",
-      "id": "2"
+      "createdAt": "2023-01-02T08:10:00Z"
     },
     {
       "id": "3",
@@ -655,13 +657,13 @@
       "createdAt": "2025-04-19T08:00:51.755Z"
     },
     {
-      "id": "a471",
-      "name": "皇城",
-      "gender": "男",
-      "phone": "13145555477",
-      "address": "北京",
-      "date": "2025-04-21",
-      "createdAt": "2025-04-21T09:30:01.246Z"
+      "name": "小丽",
+      "gender": "女",
+      "phone": "13150464666",
+      "address": "新疆",
+      "date": "2025-04-01",
+      "createdAt": "1745246558356",
+      "id": "00f2"
     }
   ],
   "goods": [
@@ -671,7 +673,7 @@
       "desciption": "蓝色格子衬衫,好看又百搭",
       "price": 278,
       "incentory": 1,
-      "created_time": "1745114499464"
+      "created_time": "1745317556"
     },
     {
       "id": "2",
@@ -1058,28 +1060,12 @@
       "created_time": "1749205556"
     },
     {
-      "name": "戒指",
-      "desciption": "时尚戒指，可调节大小",
-      "price": 288,
-      "incentory": 32,
-      "created_time": "1745227699633",
-      "id": "50"
-    },
-    {
-      "id": "d90b",
-      "name": "人字拖",
-      "desciption": "穿起来很舒服的人字拖",
-      "price": 12,
-      "incentory": 3,
-      "created_time": "1745115035393"
-    },
-    {
-      "id": "6e13",
-      "name": "iphone 16 pro max",
-      "desciption": "粉色的苹果16,便宜又好看",
-      "price": 9999,
-      "incentory": 20,
-      "created_time": "1745227761152"
+      "id": "a9da",
+      "name": "666",
+      "desciption": "666",
+      "price": 666,
+      "incentory": 666,
+      "created_time": "1745247524"
     }
   ]
 }
