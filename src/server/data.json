@@ -117,13 +117,48 @@
     "name": "Y-sum",
     "phone": "15100000000",
     "password": "123456",
-    "gender":"男",
+    "gender": "男",
     "age": 22,
     "avatar": "https://pic4.zhimg.com/v2-f10ac7fc477596faf538ca274852c68f_b.jpg",
     "identity": "超级管理员",
-    "bridthday":"2003-08-01",
+    "bridthday": "2003-08-01",
     "login_date": "2025-04-16",
-    "login_address": "江西"
+    "login_address": "江西",
+    "logs": [
+      {
+        "id":"1",
+        "type": "login",
+        "timestamp": "1715303730",
+        "ip": "203.0.113.45",
+        "device": "Windows 11/Chrome 120",
+        "status": "success"
+      },
+      {
+        "id":"2",
+        "type": "operation",
+        "timestamp": "1715304012",
+        "action": "edit_file",
+        "target": "/projects/report.docx",
+        "status": "success"
+      },
+      {
+        "id":"3",
+        "type": "operation",
+        "timestamp": "1715310303",
+        "action": "search_data",
+        "query": "SELECT * FROM users WHERE role='admin'",
+        "status": "failed",
+        "error": "permission_denied"
+      },
+      {
+        "id":"4",
+        "type": "login",
+        "timestamp": "1715337022",
+        "ip": "203.0.113.45",
+        "device": "Android 13/Firefox Mobile",
+        "status": "error"
+      }
+    ]
   },
   "users": [
     {

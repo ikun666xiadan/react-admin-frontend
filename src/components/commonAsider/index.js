@@ -4,7 +4,7 @@ import {
   UserOutlined,
   ShopOutlined,
   UnorderedListOutlined,
-  RiseOutlined,
+  ProfileOutlined,
   DesktopOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu } from "antd";
@@ -28,19 +28,19 @@ const NavItem = [
     label: "用户管理",
   },
   {
-    key: "other",
+    key: "log",
     icon: <UnorderedListOutlined />,
-    label: "其他",
+    label: "日志",
     children: [
       {
-        key: "other/otherOne",
-        icon: <RiseOutlined />,
-        label: "其他一",
+        key: "log/logLogin",
+        icon: <ProfileOutlined />,
+        label: "登录日志",
       },
       {
-        key: "other/otherTwo",
+        key: "log/logActions",
         icon: <DesktopOutlined />,
-        label: "其他二",
+        label: "操作日志",
       },
     ],
   },
